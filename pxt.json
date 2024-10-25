@@ -1,0 +1,47 @@
+{
+    "name": "TURTLE TALES",
+    "description": "",
+    "dependencies": {
+        "device": "*"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md",
+        "assets.json",
+        "main.py",
+        "tilemap.g.jres",
+        "tilemap.g.ts",
+        "images.g.jres",
+        "images.g.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "target": "1.12.56",
+        "targetId": "arcade"
+    },
+    "supportedTargets": [
+        "arcade"
+    ],
+    "preferredEditor": "blocksprj",
+    "palette": [
+        "#000000",
+        "#87a889",
+        "#b0eb93",
+        "#fff7e4",
+        "#dea38b",
+        "#A87561",
+        "#FF5542",
+        "#FF7A6B",
+        "#D32A17",
+        "#F4D171",
+        "#88ABD7",
+        "#6A8AB4",
+        "#5578A5",
+        "#3C659A",
+        "#ffe6c6",
+        "#28282e"
+    ]
+}
