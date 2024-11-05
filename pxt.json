@@ -1,5 +1,5 @@
 {
-    "name": "TURTLE TALES",
+    "name": "TURTLE TALES - Copy",
     "description": "",
     "dependencies": {
         "device": "*"
@@ -33,13 +33,13 @@
         "#fff7e4",
         "#dea38b",
         "#A87561",
-        "#FF5542",
+        "#5578A5",
         "#FF7A6B",
         "#D32A17",
-        "#F4D171",
         "#88ABD7",
+        "#F4D171",
         "#969696",
-        "#5578A5",
+        "#FF5542",
         "#3C659A",
         "#ffe6c6",
         "#28282e"

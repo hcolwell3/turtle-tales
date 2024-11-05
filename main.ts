@@ -1,5 +1,5 @@
-//  function determining how the crab move up and down the y axis
 function JumpingCrabs() {
+    //  function determining how the crab move up and down the y axis
     //  pause allows for time between jumps
     pause(100)
     //  acceleration that drives crab up the y axis
@@ -10,11 +10,20 @@ function JumpingCrabs() {
     Crab.vy = -50
 }
 
-//  Define the rule that when a player sprite (turtle) comes into contact with the enemy sprites a life is lost
-// call this function    
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function on_on_overlap(sprite2: Sprite, otherSprite: Sprite) {
-    //  induce a screen shake when enemy sprite overlaps with player
+    //  Define the rule that when a player sprite (turtle) comes into contact with the enemy sprites a life is lost
     scene.cameraShake(2, 500)
+    //  induce a screen shake when enemy sprite overlaps with player
+    // create a custom sound effect when sprites collid
+    music.play(music.createSoundEffect(WaveShape.Sine, 200, 600, 255, 0, 150, SoundExpressionEffect.None, InterpolationCurve.Linear), music.PlaybackMode.UntilDone)
+    // frequency
+    // duration 600 milliseconds 
+    // volume 
+    // beginning volume
+    // fade out time
+    // No additional effect applied
+    //  Linear means it changes at a constant rate, without acceleration or deceleration
+    // play sound until complete once
     //  loss of one life when sprites overlap
     info.changeLifeBy(-1)
     //  Pause is added so only one life is lost per second
@@ -63,23 +72,24 @@ function SharkEnemy() {
     Shark.setPosition(600, 20)
     //  acceleration -5 to travel toward turtle sprite start position
     Shark.ax = -15
-    //  animate shark sprite to mimic swimming through water, changing frames every 0.2 secs and continuos repeat
+    //  animate shark sprite to mimic swimming through water, changing frames every 0.2 secs and continous repeat
     animation.runImageAnimation(Shark, assets.animation`
         sharky
     `, 200, true)
 }
 
 controller.right.onEvent(ControllerButtonEvent.Pressed, function on_right_pressed() {
-    //  looping animation for turtle swimming
+    //  looping animation for turtle swimming in right direction, framerate 0.2sec
     animation.runImageAnimation(Turtle, assets.animation`
             Turtle animation R
         `, 200, true)
 })
 //  define function to end level when sprite reaches 'bubbles' at the end of tile map
-//  call the function to end level when sprite reaches the 'bubbles'
 scene.onOverlapTile(SpriteKind.Player, assets.tile`
         bubble b
     `, function on_overlap_tile(sprite: Sprite, location: tiles.Location) {
+    // play custom end level music, four notes at tempo 400bmp
+    music.play(music.stringPlayable("B A C5 C5 - - - - ", 400), music.PlaybackMode.UntilDone)
     //  display level one end screen
     game.splash("Level 1 complete!")
     //  wait two seconds
