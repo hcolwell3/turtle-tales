@@ -1,27 +1,28 @@
-def JumpingCrabs(): # function determining how the crab moves up and down the y-axis
+def JumpingCrabs():  # function determining how the crab moves up and down the y-axis
     # pause allows for time between jumps
     pause(100)
     # acceleration that drives crab up the y-axis
     Crab.ay = 40
-    # Pause to allow for the crab to 'drop' back to seafloor
+    # Pause to allow for the crab to 'drop' back to the seafloor
     pause(4000)
     # Negative velocity allows for the sprite to travel down the y-axis as if falling from a jump
     Crab.vy = -50
-
-def on_on_overlap(sprite2, otherSprite): # Define the rule that when a player sprite (turtle) comes into contact with the enemy sprites a life is lost
+    
+def on_on_overlap(sprite2, otherSprite):  # Define the rule that when a player sprite (turtle) comes into contact with the enemy sprites a life is lost
     scene.camera_shake(2, 500)     # induce a screen shake when an enemy sprite overlaps with player
-    #create a custom sound effect when sprites collide
-    music.play(music.create_sound_effect(WaveShape.SINE, #sine wave shape creates smooth sound
-            200, #frequency
-            600, #duration 600 milliseconds 
-            255, #volume 
-            0, #beginning volume
-            150, #fade out time
-            SoundExpressionEffect.NONE, #No additional effect applied
-            InterpolationCurve.LINEAR), # Linear means it changes at a constant rate, without acceleration or deceleration
-        music.PlaybackMode.UNTIL_DONE) #play sound until complete once
+    # create a custom sound effect when sprites collide
+    music.play(music.create_sound_effect(WaveShape.SINE,  # sine wave shape creates smooth sound
+            200,   # frequency
+            600,   # duration 600 milliseconds
+            255,   # volume
+            0,     # beginning volume
+            150,   # fade out time
+            SoundExpressionEffect.NONE,  # No additional effect applied
+            InterpolationCurve.LINEAR),  # Linear means it changes at a constant rate, without acceleration or deceleration
+        music.PlaybackMode.UNTIL_DONE)  # play sound until complete once
     info.change_life_by(-1)   # loss of one life when sprites overlap
     pause(1000)     # Pause is added so only one life is lost per second
+
 sprites.on_overlap(SpriteKind.player, SpriteKind.enemy, on_on_overlap)
 
 def on_left_pressed():
@@ -48,8 +49,6 @@ controller.right.on_event(ControllerButtonEvent.PRESSED, on_right_pressed) #when
 def Level1():
     # Set the sprite on a starting position on the left of the screen
     Turtle.set_position(20, 79)
-    # turtle control using joystick
-    controller.move_sprite(Turtle)
     # Create the tilemap for the level with barriers and end flag
     tiles.set_current_tilemap(tilemap("""
         level1
@@ -81,11 +80,10 @@ def SharkEnemy():
     # Animate shark sprite to mimic swimming through water, changing frames every 0.2 seconds and continuous repeat
     animation.run_image_animation(Shark, assets.animation("""
         sharky
-    """), 200, True) 
+    """), 200, True)
 
 # define function to end level when sprite reaches 'bubbles' at the end of tile map
 def on_overlap_tile(sprite, location):
-    #play custom end-level music, four notes at tempo 400bmp
     music.play(music.string_playable("B A C5 C5 - - - - ", 400),
         music.PlaybackMode.UNTIL_DONE)
     # Display level one end screen
@@ -130,11 +128,6 @@ def MovingCrabs():
             Crab.vx = -50
         # Set enemy sprites to bounce on the wall between 'coral' barriers
         Crab.set_flag(SpriteFlag.BOUNCE_ON_WALL, True)
-"""
-
-naming sprites
-
-"""
 Shark: Sprite = None
 Crab: Sprite = None
 Turtle: Sprite = None
@@ -148,6 +141,8 @@ Turtle = sprites.create(assets.image("""
 """), SpriteKind.player)
 # Focus camera on Turtle player sprite at all times
 scene.camera_follow_sprite(Turtle)
+# turtle control using joystick
+controller.move_sprite(Turtle)
 # Begin the game with three lives
 info.set_life(3)
 # Level one welcome
