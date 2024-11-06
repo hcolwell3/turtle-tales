@@ -2,12 +2,11 @@
 > Open this page at [https://hcolwell3.github.io/turtle-tales/](https://hcolwell3.github.io/turtle-tales/)
 
 
-This repository can be added as an **extension** in MakeCode.
 
-* open [https://arcade.makecode.com/](https://arcade.makecode.com/)
 
-# Project Name
-> Outline a brief description of your project.
+# Turtle Tales
+> Welcome to Turtle Tales, a single player side scrolling game set in an underwater world. This action packed game includes a turtle (player sprite) navigating through levels, avoiding enemies such as crabs and sharks along the way. 
+
 > Live demo [_here_](https://www.example.com). <!-- If you have the project hosted somewhere, include the link here. -->
 
 ## Table of Contents
@@ -20,71 +19,61 @@ This repository can be added as an **extension** in MakeCode.
 * [Project Status](#project-status)
 * [Room for Improvement](#room-for-improvement)
 * [Acknowledgements](#acknowledgements)
-* [Contact](#contact)
-<!-- * [License](#license) -->
 
 
 ## General Information
-- Provide general information about your project here.
-- What problem does it (intend to) solve?
-- What is the purpose of your project?
-- Why did you undertake it?
-<!-- You don't have to answer all the questions - just the ones relevant to your project. -->
+This is a university project for Working with Data and code. The intention is to design a piece of code that dmeonstrates my literacy with code, specifically python language. 
+Turtle Tales is designed for a 7-10 year old age demographic and is to be ran on a TinkerGen GameGo. 
 
 
 ## Technologies Used
-- Tech 1 - version 1.0
-- Tech 2 - version 2.0
-- Tech 3 - version 3.0
+- Python
+- MakeCode Arcade
 
 
 ## Features
-List the ready features here:
-- Awesome feature 1
-- Awesome feature 2
-- Awesome feature 3
+Key features of this code include
+- Main player (Turtle) sprite is able to be controlled with joystick and includes directional animations.
+- Diverse enemies (both Crabs and Sharks) that move randomly to create threats to turtle.
+- Level design that uses tilemaps to build the world.
+- Collision effects that occur when player contacts enemy, includes camera shake and life reduction.
+- Sound effects that are triggered by specific moments of game play.
 
-
-## Screenshots
-![Example screenshot](./img/screenshot.png)
-<!-- If you have screenshots you'd like to share, include them here. -->
+The inclusion of these effects within the game work together to create a fun and interactive game for the players to learn skills of strategy, timing, and fine motor skills. 
 
 
 ## Setup
-What are the project requirements/dependencies? Where are they listed? A requirements.txt or a Pipfile.lock file perhaps? Where is it located?
+This repository can be added as an **extension** in MakeCode.
 
-Proceed to describe how to install / setup one's local environment / get started with the project.
+* open [https://arcade.makecode.com/](https://arcade.makecode.com/)
+
 
 
 ## Usage
 How does one go about using it?
 Provide various use cases and code examples here.
 
-`write-your-code-here`
+
 
 
 ## Project Status
-Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
+Project is: in progress - paused
+
+There is 
 
 
 ## Room for Improvement
 Include areas you believe need improvement / could be improved. Also add TODOs for future development.
 
 Room for improvement:
-- Improvement to be done 1
-- Improvement to be done 2
+- Ways for players to regain lives through a food element.
+- Background music to be playing throughout all gameplay to maintain attention for longer. 
 
 To do:
-- Feature to be added 1
-- Feature to be added 2
-
+- Add additional levels to build out further game play.
+- More enemies to create harder gameplay.
 
 ## Acknowledgements
-Give credit here.
-- This project was inspired by...
-- This project was based on [this tutorial](https://www.example.com).
-- Many thanks to...
+- This project was inspired by all side scrolling games who paved the way for baby coders to learn and develop skills.
+- Special thanks to Evangeline Aguas for her ongoing support and for just being a legend <3
 
-
-## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
