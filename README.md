@@ -1,5 +1,6 @@
+Find original python code in main.py
 
-> Open this page at [https://hcolwell3.github.io/turtle-tales/](https://hcolwell3.github.io/turtle-tales/)
+Find downloadable file to play on TinkerGen GameGo in arcade-TURTLE-TALEs.uf2
 
 
 
