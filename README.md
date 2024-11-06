@@ -48,18 +48,12 @@ This repository can be added as an **extension** in MakeCode.
 * open [https://arcade.makecode.com/](https://arcade.makecode.com/)
 
 
-
-## Usage
-How does one go about using it?
-Provide various use cases and code examples here.
-
-
-
-
 ## Project Status
 Project is: in progress - paused
 
-There is 
+There is more work I wish to do to this code, this is not the final product. However, this is the piece I am submitting to my A2 prototype project. 
+
+More can be done after results are returned. 
 
 
 ## Room for Improvement
