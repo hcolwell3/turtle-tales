@@ -14,16 +14,16 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function on_on_overlap(sp
     //  Define the rule that when a player sprite (turtle) comes into contact with the enemy sprites a life is lost
     scene.cameraShake(2, 500)
     //  induce a screen shake when enemy sprite overlaps with player
-    // create a custom sound effect when sprites collid
+    //  create a custom sound effect when sprites collid
     music.play(music.createSoundEffect(WaveShape.Sine, 200, 600, 255, 0, 150, SoundExpressionEffect.None, InterpolationCurve.Linear), music.PlaybackMode.UntilDone)
-    // frequency
-    // duration 600 milliseconds 
-    // volume 
-    // beginning volume
-    // fade out time
-    // No additional effect applied
+    //  frequency
+    //  duration 600 milliseconds
+    //  volume
+    //  beginning volume
+    //  fade out time
+    //  No additional effect applied
     //  Linear means it changes at a constant rate, without acceleration or deceleration
-    // play sound until complete once
+    //  play sound until complete once
     //  loss of one life when sprites overlap
     info.changeLifeBy(-1)
     //  Pause is added so only one life is lost per second
@@ -39,8 +39,6 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function on_left_pressed(
 function Level1() {
     //  Set the sprite on a starting position on the left of the screen
     Turtle.setPosition(20, 79)
-    //  turtle control using joystick
-    controller.moveSprite(Turtle)
     //  Create the tilemap for the level with barriers and end flag
     tiles.setCurrentTilemap(tilemap`
         level1
@@ -88,7 +86,7 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function on_right_presse
 scene.onOverlapTile(SpriteKind.Player, assets.tile`
         bubble b
     `, function on_overlap_tile(sprite: Sprite, location: tiles.Location) {
-    // play custom end level music, four notes at tempo 400bmp
+    //  play custom end level music, four notes at tempo 400bmp
     music.play(music.stringPlayable("B A C5 C5 - - - - ", 400), music.PlaybackMode.UntilDone)
     //  display level one end screen
     game.splash("Level 1 complete!")
@@ -132,7 +130,6 @@ function MovingCrabs() {
     }
 }
 
-/** naming sprites */
 let Shark : Sprite = null
 let Crab : Sprite = null
 let Turtle : Sprite = null
@@ -146,6 +143,8 @@ Turtle = sprites.create(assets.image`
 `, SpriteKind.Player)
 //  Focus camera on Turtle player sprite at all times
 scene.cameraFollowSprite(Turtle)
+//  turtle control using joystick
+controller.moveSprite(Turtle)
 //  Begin the game with three lives
 info.setLife(3)
 //  Level one welcome

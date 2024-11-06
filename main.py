@@ -1,4 +1,5 @@
-def JumpingCrabs(): # function determining how the crab move up and down the y axis
+def JumpingCrabs():
+    # function determining how the crab move up and down the y axis
     # pause allows for time between jumps
     pause(100)
     # acceleration that drives crab up the y axis
@@ -8,18 +9,20 @@ def JumpingCrabs(): # function determining how the crab move up and down the y a
     # negative velocity allows for the sprite to travel down the y axis as if falling from a jump
     Crab.vy = -50
 
-def on_on_overlap(sprite2, otherSprite): # Define the rule that when a player sprite (turtle) comes into contact with the enemy sprites a life is lost
-    scene.camera_shake(2, 500)     # induce a screen shake when enemy sprite overlaps with player
-    #create a custom sound effect when sprites collid
+def on_on_overlap(sprite2, otherSprite):
+    # Define the rule that when a player sprite (turtle) comes into contact with the enemy sprites a life is lost
+    scene.camera_shake(2, 500)
+    # induce a screen shake when enemy sprite overlaps with player
+    # create a custom sound effect when sprites collid
     music.play(music.create_sound_effect(WaveShape.SINE,
-            200, #frequency
-            600, #duration 600 milliseconds 
-            255, #volume 
-            0, #beginning volume
-            150, #fade out time
-            SoundExpressionEffect.NONE, #No additional effect applied
-            InterpolationCurve.LINEAR), # Linear means it changes at a constant rate, without acceleration or deceleration
-        music.PlaybackMode.UNTIL_DONE) #play sound until complete once
+            200,   # frequency
+            600, # duration 600 milliseconds
+            255,    # volume
+            0,  # beginning volume
+            150, # fade out time
+            SoundExpressionEffect.NONE, # No additional effect applied
+            InterpolationCurve.LINEAR),    # Linear means it changes at a constant rate, without acceleration or deceleration
+        music.PlaybackMode.UNTIL_DONE) # play sound until complete once
     # loss of one life when sprites overlap
     info.change_life_by(-1)
     # Pause is added so only one life is lost per second
@@ -40,8 +43,6 @@ controller.left.on_event(ControllerButtonEvent.PRESSED, on_left_pressed)
 def Level1():
     # Set the sprite on a starting position on the left of the screen
     Turtle.set_position(20, 79)
-    # turtle control using joystick
-    controller.move_sprite(Turtle)
     # Create the tilemap for the level with barriers and end flag
     tiles.set_current_tilemap(tilemap("""
         level1
@@ -58,6 +59,7 @@ def level2():
     effects.bubbles.start_screen_effect(500)
     # set the sprite on a starting position on the left of the screen
     Turtle.set_position(20, 79)
+    
 # define the functions of the shark enemy
 def SharkEnemy():
     global Shark
@@ -72,7 +74,7 @@ def SharkEnemy():
     # animate shark sprite to mimic swimming through water, changing frames every 0.2 secs and continous repeat
     animation.run_image_animation(Shark, assets.animation("""
         sharky
-    """), 200, True) 
+    """), 200, True)
 
 def on_right_pressed():
     # looping animation for turtle swimming in right direction, framerate 0.2sec
@@ -85,8 +87,9 @@ def on_right_pressed():
 controller.right.on_event(ControllerButtonEvent.PRESSED, on_right_pressed)
 
 # define function to end level when sprite reaches 'bubbles' at the end of tile map
+
 def on_overlap_tile(sprite, location):
-    #play custom end level music, four notes at tempo 400bmp
+    # play custom end level music, four notes at tempo 400bmp
     music.play(music.string_playable("B A C5 C5 - - - - ", 400),
         music.PlaybackMode.UNTIL_DONE)
     # display level one end screen
@@ -131,11 +134,6 @@ def MovingCrabs():
             Crab.vx = -50
         # Set enemy sprites to bounce on the wall between 'coral' barriers
         Crab.set_flag(SpriteFlag.BOUNCE_ON_WALL, True)
-"""
-
-naming sprites
-
-"""
 Shark: Sprite = None
 Crab: Sprite = None
 Turtle: Sprite = None
@@ -149,6 +147,8 @@ Turtle = sprites.create(assets.image("""
 """), SpriteKind.player)
 # Focus camera on Turtle player sprite at all times
 scene.camera_follow_sprite(Turtle)
+# turtle control using joystick
+controller.move_sprite(Turtle)
 # Begin the game with three lives
 info.set_life(3)
 # Level one welcome

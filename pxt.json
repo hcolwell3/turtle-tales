@@ -1,5 +1,5 @@
 {
-    "name": "TURTLE TALES - Copy",
+    "name": "TURTLE TALEs",
     "description": "",
     "dependencies": {
         "device": "*"
@@ -19,7 +19,7 @@
         "test.ts"
     ],
     "targetVersions": {
-        "target": "1.12.56",
+        "target": "1.12.57",
         "targetId": "arcade"
     },
     "supportedTargets": [
