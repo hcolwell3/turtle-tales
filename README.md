@@ -8,8 +8,6 @@ Find downloadable file to play on TinkerGen GameGo in arcade-TURTLE-TALEs.uf2
 # Turtle Tales
 > Welcome to Turtle Tales, a single player side scrolling game set in an underwater world. This action packed game includes a turtle (player sprite) navigating through levels, avoiding enemies such as crabs and sharks along the way. 
 
-> Live demo [_here_](https://www.example.com). <!-- If you have the project hosted somewhere, include the link here. -->
-
 ## Table of Contents
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
