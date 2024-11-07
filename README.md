@@ -40,7 +40,7 @@ The inclusion of these effects within the game work together to create a fun and
 
 
 ## Setup
-This repository can be added as an **extension** in MakeCode.
+This repository can be imported and ran through MakeCode Arcade. 
 
 * open [https://arcade.makecode.com/](https://arcade.makecode.com/)
 
