@@ -67,3 +67,17 @@ To do:
 - This project was inspired by all side scrolling games who paved the way for baby coders to learn and develop skills.
 - Special thanks to Evangeline Aguas for her ongoing support and for just being a legend <3
 
+## References
+References for entire project
+
+Ashburton Public Library. (2021, March 31). Python for beginners | Learn Python programming tutorial for beginners [Video]. YouTube. https://www.youtube.com/watch?v=EsBYmewz_mc&ab_channel=AshburtonPublicLibrary
+
+Berry, D. (2011). The philosophy of software : Code and mediation in the digital age. Palgrave Macmillan UK.
+
+HBalloon. (2023, October 23). Jt8NJYcXCUo [Video]. YouTube. https://www.youtube.com/watch?v=Jt8NJYcXCUo&ab_channel=HBalloon
+
+Malcolm, G. (2023, October 30). jZRzzRgkePg [Video]. YouTube. https://www.youtube.com/watch?v=jZRzzRgkePg&ab_channel=GlennMalcolm
+
+Muller, P. (2023). Python for students 2023: Creating variables [Video course]. LinkedIn Learning. https://www.linkedin.com/learning/python-for-students-2023/creating-variables?resume=false&u=2129308
+
+Stapleton, A. (2024). Week 05 – Tutorial code [Subject 52685 Tutorial Notes]. UTS. https://canvas.uts.edu.au/courses/33108/pages/week-05-tutorial-code?module_item_id=2021302 
