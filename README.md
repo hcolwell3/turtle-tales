@@ -1,6 +1,6 @@
 Find original python code in main.py
 
-Find downloadable file to play on TinkerGen GameGo in arcade-TURTLE-TALEs.uf2
+Find downloadable file to upload on MakeCode or to play on TinkerGen GameGo in arcade-TURTLE-TALEs.uf2 
 
 
 
